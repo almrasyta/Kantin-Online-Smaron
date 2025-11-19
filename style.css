@@ -267,6 +267,79 @@ button:hover,
     animation: pop 0.4s ease;
 }
 
+/* RESPONSIVE MODE (untuk HP) */
+@media (max-width: 600px) {
+
+    /* Judul halaman */
+    h1, h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    /* Container menu */
+    .menu-list {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+
+    /* Card menu */
+    .menu-card {
+        padding: 12px;
+    }
+
+    .menu-card img {
+        height: 180px;
+        border-radius: 10px;
+    }
+
+    .menu-card h3 {
+        font-size: 18px;
+    }
+
+    .menu-card button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Form */
+    form {
+        width: 90%;
+        margin: auto;
+        padding: 15px;
+    }
+
+    form input, form select {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    /* Footer */
+    .footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
 @keyframes pop {
     0% { transform: scale(0); }
     100% { transform: scale(1); }
