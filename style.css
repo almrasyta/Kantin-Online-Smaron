@@ -1,0 +1,82 @@
+/* Background dasar */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #eaffea;
+    overflow: hidden;
+}
+
+/* Landing Page Center */
+.landing {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card utama */
+.landing-container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    background: #ffffffcc;
+    padding: 40px 60px;
+    border-radius: 25px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    backdrop-filter: blur(5px);
+}
+
+/* Judul */
+h1 {
+    color: #1e7f34;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #29b65e;
+    color: white;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1e8c46;
+}
+
+/* Background Shape Bulat */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: #c8f7cd;
+    filter: blur(2px);
+}
+
+.circle1 {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -80px;
+}
+
+.circle2 {
+    width: 200px;
+    height: 200px;
+    bottom: -40px;
+    right: -40px;
+    background: #b0f4ba;
+}
+
+.circle3 {
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    left: 70%;
+    background: #d5ffd9;
+}
