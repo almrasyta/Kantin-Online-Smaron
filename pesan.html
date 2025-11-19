@@ -56,6 +56,11 @@ Terima kasih 🙏🍱`;
             let url = "https://wa.me/" + nomorWA + "?text=" + encodeURIComponent(pesan);
 
             window.open(url, "_blank");
+
+            setTimeout(() => {
+    window.location.href = "success.html";
+}, 500);
+
         }
     </script>
 </head>
