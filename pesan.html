@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Menangkap item & harga dari menu.html
+        function getQuery(name) {
+            let url = new URL(window.location.href);
+            return url.searchParams.get(name);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let makanan = getQuery("item");
+            let harga = getQuery("harga");
+
+            if (makanan) {
+                document.getElementById("namaMakanan").value = makanan;
+                document.getElementById("harga").value = harga;
+
+                // Load gambar otomatis
+                let imgName = makanan.toLowerCase().replace(/ /g, "_") + ".jpg";
+                document.getElementById("gambarMakanan").src = "gambar/" + imgName;
+            }
+        });
+
+        // Kirim ke WhatsApp
+        function kirimWA() {
+            let nama = document.getElementById("nama").value;
+            let kelas = document.getElementById("kelas").value;
+            let makanan = document.getElementById("namaMakanan").value;
+            let harga = document.getElementById("harga").value;
+            let jumlah = document.getElementById("jumlah").value;
+            let bayar = document.getElementById("metode").value;
+
+            let total = harga * jumlah;
+
+            // Masukkan nomor kamu di sini
+            let nomorWA = "6281216903245"; // ← ganti ke nomor kamu
+
+            let pesan = 
+`Halo! Saya ingin memesan:
+• Nama: ${nama}
+• Kelas: ${kelas}
+• Menu: ${makanan}
+• Harga: Rp ${harga}
+• Jumlah: ${jumlah}
+• Total: Rp ${total}
+• Pembayaran: ${bayar}
+
+Terima kasih 🙏🍱`;
+
+            let url = "https://wa.me/" + nomorWA + "?text=" + encodeURIComponent(pesan);
+
+            window.open(url, "_blank");
+        }
+    </script>
+</head>
+
+<body class="pesan-page">
+
+    <div class="pesan-container">
+        <h1>🍃 Form Pemesanan</h1>
+
+        <!-- Gambar Makanan -->
+        <img id="gambarMakanan" class="img-pesan" src="gambar/default.jpg">
+
+        <form onsubmit="kirimWA(); return false;">
+
+            <label>Nama Kamu:</label>
+            <input type="text" id="nama" required>
+
+            <label>Kelas:</label>
+            <input type="text" id="kelas" required>
+
+            <label>Nama Menu:</label>
+            <input type="text" id="namaMakanan" readonly>
+
+            <label>Harga:</label>
+            <input type="text" id="harga" readonly>
+
+            <label>Jumlah:</label>
+            <input type="number" id="jumlah" min="1" value="1" required>
+
+            <label>Metode Pembayaran:</label>
+            <select id="metode">
+                <option>Tunai</option>
+                <option>Dana</option>
+                <option>OVO</option>
+                <option>ShopeePay</option>
+            </select>
+
+            <button type="submit" class="btn-pesan">Kirim Pesanan</button>
+        </form>
+    </div>
+
+</body>
+</html>
