@@ -1,242 +1,184 @@
-/* Background dasar */ 
+/* --- GLOBAL --- */
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #eaffea;
-    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    background: #f5f7f8;
+    color: #2e3a34;
+    line-height: 1.6;
 }
 
-/* Landing Page Center */
-.landing {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Card utama */
-.landing-container {
-    position: relative;
-    z-index: 10;
+/* --- HEADER NAVBAR --- */
+header {
+    background: #1d5c39;
+    padding: 18px 40px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
     text-align: center;
-    background: #ffffffcc;
-    padding: 40px 60px;
-    border-radius: 25px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
 }
 
-/* Judul */
-h1, h2, h3 {
-    color: #1e7f34;
-    font-size: 30px;
-    margin-bottom: 10px;
+/* --- PAGE TITLE --- */
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 40px;
+    color: #1d5c39;
     font-weight: 700;
 }
 
-/* Tombol umum */
-button, .btn, .btn-pesan, .btn-back, .btn-welcome {
-    background: #29b65e;
-    color: white;
-    padding: 14px 30px;
-    text-decoration: none;
-    border-radius: 12px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
+/* --- GRID CONTAINER --- */
+.grid-container {
+    width: 90%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* --- CARD STYLE --- */
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     transition: 0.25s ease;
 }
 
-button:hover,
-.btn:hover,
-.btn-pesan:hover,
-.btn-back:hover,
-.btn-welcome:hover {
-    background: #1e8c46;
-    transform: scale(1.05);
-}
-
-/* Background Shape Bulat */
-.circle {
-    position: absolute;
-    border-radius: 50%;
-    background: #c8f7cd;
-    filter: blur(2px);
-}
-
-.circle1 {
-    width: 300px;
-    height: 300px;
-    top: -50px;
-    left: -80px;
-}
-
-.circle2 {
-    width: 200px;
-    height: 200px;
-    bottom: -40px;
-    right: -40px;
-    background: #b0f4ba;
-}
-
-.circle3 {
-    width: 150px;
-    height: 150px;
-    top: 40%;
-    left: 70%;
-    background: #d5ffd9;
-}
-
-/* Halaman Menu */
-.menu-page {
-    background: #eaffea;
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.title {
-    margin-top: 30px;
-    color: #1e7f34;
-    font-size: 32px;
-}
-
-/* Grid Menu */
-.menu-grid, .menu-list, .menu-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    padding: 20px;
-    width: 90%;
-    margin: auto;
-    margin-top: 30px;
-}
-
-/* Card Menu */
-.menu-card, .menu-item {
-    background: white !important;
-    border-radius: 18px !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
-    padding-bottom: 15px;
-    transition: 0.3s ease;
-}
-
-.menu-card:hover, .menu-item:hover {
+.card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.1);
 }
 
-.menu-card img, .menu-item img {
+.card img {
     width: 100%;
-    height: 160px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 18px 18px 0 0;
 }
 
-/* Tombol Pesan */
-.btn-menu {
+.card-content {
+    padding: 18px 20px;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #1d5c39;
+    margin: 5px 0;
+}
+
+.card .price {
+    font-weight: 700;
+    color: #247f4c;
+    margin-bottom: 8px;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    padding: 10px 22px;
     display: inline-block;
-    background: #2ecc71;
-    padding: 10px 20px;
-    color: white;
+    background: #247f4c;
+    color: white !important;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 12px;
-    margin-top: 10px;
+    font-weight: 600;
+    transition: 0.25s ease;
 }
 
-.btn-menu:hover {
-    background: #25a85d;
+.btn:hover {
+    background: #195c35;
 }
 
-/* Halaman Pemesanan (form) */
-.pesan-page {
-    background: #eaffea;
-    display: flex;
-    justify-content: center;
-    padding: 40px 0;
-}
-
-.pesan-container {
+/* --- FORM STYLE --- */
+.form-box {
+    width: 90%;
+    max-width: 480px;
+    margin: 50px auto;
     background: white;
-    padding: 30px;
-    border-radius: 20px;
-    width: 85%;
-    max-width: 420px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
 label {
-    font-weight: bold;
-    color: #1e7f34;
+    font-weight: 600;
+    color: #1d5c39;
 }
 
-input, select {
+input, select, textarea {
     width: 100%;
     padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 12px;
+    margin: 8px 0 15px;
+    border: 2px solid #d6e7db;
     border-radius: 10px;
-    border: 2px solid #c2edc2;
+    font-size: 16px;
 }
 
-/* Halaman Success */
-.success-page {
-    background: #e8ffe8;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Submit Button */
+.submit-btn {
+    background: #247f4c;
+    padding: 12px;
+    width: 100%;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
+.submit-btn:hover {
+    background: #195c35;
+}
+
+/* --- SUCCESS PAGE --- */
 .success-box {
+    margin: 70px auto;
+    max-width: 430px;
     background: white;
-    padding: 40px 30px;
-    border-radius: 20px;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     text-align: center;
-    width: 85%;
-    max-width: 420px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-.icon-check {
+.success-icon {
     font-size: 70px;
-    color: #2ecc71;
-    margin-bottom: 10px;
-    animation: pop 0.4s ease;
+    color: #247f4c;
+    margin-bottom: 15px;
 }
 
-@keyframes pop {
-    from { transform: scale(0.4); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+.success-title {
+    color: #1d5c39;
+    font-size: 28px;
+    font-weight: 700;
 }
 
-/* Animasi Fade In */
-.fade-in {
-    animation: fadeIn 0.8s ease forwards;
-    opacity: 0;
+.success-subtitle {
+    color: #3b4d43;
+    margin-bottom: 20px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    background: #1d5c39;
+    color: white;
+    padding: 18px;
+    margin-top: 40px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
 
-/* RESPONSIVE MODE */
+/* --- RESPONSIVE --- */
 @media (max-width: 600px) {
-
-    h1, h2 {
-        font-size: 22px;
+    .page-title {
+        font-size: 26px;
     }
 
-    .menu-card img, .menu-item img {
-        height: 180px;
+    .card img {
+        height: 150px;
     }
 
-    button, .btn {
-        width: 100%;
-        padding: 12px;
-    }
-
-    .pesan-container {
-        width: 90%;
+    .form-box {
+        padding: 20px;
     }
 }
