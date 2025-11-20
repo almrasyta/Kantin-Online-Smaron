@@ -326,3 +326,45 @@ html, body {
     overflow-x: hidden !important;
     position: static !important;
 }
+
+.menu-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: .3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+button, .btn {
+    background: #ff5722;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+}
+
+button:hover, .btn:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-list, .menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
