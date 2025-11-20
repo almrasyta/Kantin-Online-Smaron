@@ -20,10 +20,6 @@
             if (makanan) {
                 document.getElementById("namaMakanan").value = makanan;
                 document.getElementById("harga").value = harga;
-
-                // Load gambar otomatis
-                let imgName = makanan.toLowerCase().replace(/ /g, "_") + ".jpg";
-                document.getElementById("gambarMakanan").src = "gambar/" + imgName;
             }
         });
 
