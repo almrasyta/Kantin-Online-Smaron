@@ -1,3 +1,10 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #b9ffcf, #8fffad);
+    min-height: 100vh;
+}
+
 /* Background dasar */
 body {
     margin: 0;
